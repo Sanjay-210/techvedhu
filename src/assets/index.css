@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.shadow-bottom-inner-blue {
+    /* Inner blue shadow at the bottom */
+    box-shadow: inset 0px -4px 6px rgba(42, 134, 255, 0.9), /* Soft inner blue shadow at the bottom */
+                -2px -2px 8px rgba(0, 0, 0, 0.33),         /* Soft outer shadow on the left */
+                2px -2px 8px rgba(0, 0, 0, 0.33),          /* Soft outer shadow on the right */
+                2px -0px 8px rgba(0, 0, 0, 0.33);          /* Soft outer shadow on the top */
+  }
+  
+.custom-shape {
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 50% 30%, 0 20%);
+} 
+
+.ushaped-background {
+    width: 100%;
+    background-color: #1A2E54; /* SVG fill color */
+    clip-path: polygon(
+      0% 0%, 
+      20% 15%,  /* Adjust the curve point */
+      80% 15%,  /* Adjust the curve point */
+      100% 0%, 
+      100% 100%, 
+      0% 100%
+    );
+    margin-top: 6rem; /* Add space below the U-shaped background */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 1s ease-out forwards;
+  }
+
+  .circle-container {
+    width: 300px; /* Fixed width for the circle */
+    height: 170px; /* Fixed height for the circle */
+    border-radius: 50%; /* Makes it a perfect circle */
+    overflow: hidden; /* Ensures the image doesn't exceed the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Optional background for better visuals */
+  }
+  
+  .circle-image {
+    width: 120px; /* Fills the container */
+    height: 120px; /* Ensures no distortion */
+    object-fit: cover; /* Ensures the image scales correctly */
+  }

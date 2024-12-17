@@ -7,3 +7,4 @@ export default defineConfig({
   plugins: [react(), pages()],
   base: '/techvedhu/',  // This is the base path for GitHub Pages
 });
+
